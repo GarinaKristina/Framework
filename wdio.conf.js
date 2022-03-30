@@ -22,7 +22,9 @@ exports.config = {
   //
   specs: ['./test/specs/**/*.js'],
   // Patterns to exclude.
-  suites: ['./test/specs/google/framework.js'],
+  suites: {
+    calculator: ['./test/specs/google/framework.js'],
+  },
   exclude: [
     // 'path/to/excluded/files'
   ],

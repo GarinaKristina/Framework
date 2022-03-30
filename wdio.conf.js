@@ -22,7 +22,7 @@ exports.config = {
   //
   specs: ['./test/specs/**/*.js'],
   // Patterns to exclude.
-  suite: ['./test/specs/google/framework.js'],
+  suites: ['./test/specs/google/framework.js'],
   exclude: [
     // 'path/to/excluded/files'
   ],
@@ -49,11 +49,11 @@ exports.config = {
   // https://saucelabs.com/platform/platform-configurator
   //
   capabilities: [
-    {
-      maxInstances: 1,
-      browserName: 'chrome',
-      acceptInsecureCerts: true,
-    },
+    // {
+    //   maxInstances: 1,
+    //   browserName: 'chrome',
+    //   acceptInsecureCerts: true,
+    // },
     {
       maxInstances: 1,
       browserName: 'MicrosoftEdge',

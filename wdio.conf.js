@@ -23,7 +23,7 @@ exports.config = {
   specs: ['./test/specs/**/*.js'],
   // Patterns to exclude.
   suites: {
-    calculator: ['./test/specs/google/framework.js'],
+    all: ['./test/specs/google/framework.js'],
   },
   exclude: [
     // 'path/to/excluded/files'
@@ -51,16 +51,16 @@ exports.config = {
   // https://saucelabs.com/platform/platform-configurator
   //
   capabilities: [
-     {
-      maxInstances: 1,
-      browserName: 'chrome',
-     acceptInsecureCerts: true,
-    },
     {
       maxInstances: 1,
-      browserName: 'MicrosoftEdge',
+      browserName: 'chrome',
       acceptInsecureCerts: true,
     },
+    //{
+    //  maxInstances: 1,
+    //  browserName: 'MicrosoftEdge',
+    //  acceptInsecureCerts: true,
+    //},
   ],
   //
   // ===================
@@ -234,8 +234,13 @@ exports.config = {
    * @param {Boolean} result.passed    true if test has passed, otherwise false
    * @param {Object}  result.retries   informations to spec related retries, e.g. `{ attempts: 0, limit: 0 }`
    */
-  // afterTest: function(test, context, { error, result, duration, passed, retries }) {
-  // },
+  //afterTest: function (test, context, { error, result, duration, passed, retries }) {
+  //  if (!result.passed) {
+  //   const timestamp = new Date().toJSON().replace(/:/g, '-');
+  //   const filename = 'TEST_Framework' + '_' + timestamp + '.png';
+  //   browser.saveScreenshot(filename);
+  // }
+  //},
 
   /**
    * Hook that gets executed after the suite has ended
